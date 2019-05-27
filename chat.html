@@ -6,53 +6,101 @@
         <link rel="stylesheet" type="text/css" href="prosjekt3.css">
     </head>
     <body>
-        <form id="skjema">
-            <input type="text" id="inpSendar" required
+        <header>
+            <h1 class="grid-element1"><img src="Bilder/Chatsymbol.ico"></h1>
+        </header>
+        <main>
+            <div><a href="index.html">Heim</a></div>
+            <div><a>jddd</a></div>
+            <div><a>jdjwd</a></div>
+            <div><a>dwdd</a></div>
+        <section style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <form id="skjema">
+            <input type="text" id="inpAvsendar" required
             placeholder="Kven er du?">
             <input type="text" id="inpMeaning" required
             placeholder="Kva seier du?">
             <button type="submit"
             class="button">OK</button>
         </form>
-        <script                            src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+        <article id="txtMeldinger" style="color: whitesmoke; width: 300px; padding: 5px;"></article>    
+        </section>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var config = {
+    apiKey: "AIzaSyAc0yS9-TQ6XvlIwRkNk9M8LKx3XKo5Azs",
+    authDomain: "anve-eb1f5.firebaseapp.com",
+    databaseURL: "https://anve-eb1f5.firebaseio.com",
+    projectId: "anve-eb1f5",
+    storageBucket: "anve-eb1f5.appspot.com",
+    messagingSenderId: "315522268955",
+    appId: "1:315522268955:web:d9b9c97b3a31b440"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(config);
+</script>
         <script>
-            var firebaseConfig = {
-            apiKey: "AIzaSyAdauJ-       mG_yeqZWIggSckDLHu8S_wEaIZY",
-            authDomain: "prosjekt-3.firebaseapp.com",
-            databaseURL: "https://prosjekt-3.firebaseio.com",
-            projectId: "prosjekt-3",
-            storageBucket: "prosjekt-3.appspot.com",
-            messagingSenderId: "1015233995729",
-            appId: "1:1015233995729:web:76c756706188a891"
-        };
-            firebase.initializeApp(firebaseConfig);
-        </script>
-        <script>
-            let database=firebase.database();
-            let meldingar=database.ref("meldingar");
-            let skjema=document.getElementById("skjema");
-            let inpSendar=document.getElementById("inpSendar");
-            let inpMeining=document.getElementById("inpMeining");
-            let txtMeldingar=document.getElementById("txtMeldingar");
-            function visMelding(snapshot){
-                let melding=snapshot.val();
-                let meldingTekst=`<p>
-                    <b>${melding.sendar}:</b>
-                    <i>${melding.tekst}:</i>
-                </p>`;
-                txtMeldingar.innerHTML=txtMeldingar.innerHTML+meldingTekst;
-            }
-            function regNymelding(evt){
-                evt.preventDefault();
-                var nyMelding{
-                    sendar:inpSendar.value,
-                    tekst:inpMeining.value
-                };
-                meldingar.push(nyMelding)
-                inpMeining.value="";
-            }
-            meldingar.on("child_added", visMelding);
-            skjema.onsubmit=regNymelding;
-        </script>
+
+let database = firebase.database();
+
+let meldinger = database.ref("meldinger");
+
+let skjema = document.getElementById("skjema");
+
+let inpAvsender = document.getElementById("inpAvsendar");
+
+let inpMening = document.getElementById("inpMeaning");
+
+let txtMeldinger = document.getElementById("txtMeldinger");
+
+function visMelding(snapshot) {
+
+let melding = snapshot.val();
+
+let meldingTekst = `<p>
+
+<b>${melding.avsender}: </b>
+
+<i>${melding.tekst}</i>
+
+</p>`;
+
+    txtMeldinger.innerHTML = txtMeldinger.innerHTML + meldingTekst;
+
+}
+
+function regNyMelding(evt) {
+
+evt.preventDefault();
+
+let nyMelding = {
+
+avsender:inpAvsender.value,
+
+tekst:inpMening.value
+
+};
+
+meldinger.push(nyMelding);
+
+inpMening.value = "";
+
+}
+
+meldinger.on("child_added", visMelding);
+
+skjema.onsubmit = regNyMelding;
+
+</script>
+
+
+        </main>
     </body>
 </html>

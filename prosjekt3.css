@@ -19,13 +19,7 @@ main {
 footer {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    background-color: slategray;
-    border-style: solid;
-    border-width: 20px;
-    border-right-color: gray;
-    border-left-color: gray;
-    border-bottom-color: whitesmoke;
-    border-top-color: whitesmoke;
+    background-color: antiquewhite;
 }
 
 html {
@@ -134,11 +128,13 @@ button:hover{
 h2 {
     margin-top: 100px;
     padding: 10px;
-    background-color: indianred;
     border-radius: 10px;
+    border-color: indianred;
+    border-width: 7px;
+    color: whitesmoke;
     margin-left: 1vw;
-    font-family: sans-serif;
-    font-size: 20px;   
+    font-size: 20px; 
+    background-color: black;
 }
 
 p {
@@ -148,7 +144,6 @@ p {
 
 .p {
     grid-column-start: 2;
-    margin-top: 3px;
 }
 
 .a {
@@ -168,4 +163,145 @@ p>a:hover {
 
 input {
     margin-bottom: 5px;
+}
+
+video {
+    background-color: indianred;
+    padding: 6px;
+    margin-top: 100px;
+    border-style: solid;
+    border-color: indianred;
+    border-width: 7px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50vw;
+}
+
+.video {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+}
+
+.ul {
+    margin-top: auto;
+    background-color: coral;
+    color: black;
+    height: 35%;
+    margin-left: 5vw;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 10px;
+    grid-column-start: 2;
+}
+
+.img1 {
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 10px;
+    grid-column-start: 3;
+    background-color: black;
+    margin-left: 5vw;
+    width:90%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.h2 {
+    grid-row-start: 1;
+}
+
+audio {
+    grid-row-start: 2;
+}
+
+.audio {
+    margin-left: 5vw;
+}
+
+.h2a {
+    margin-top: 7px;
+    margin-left: 5vw;   
+}
+
+.img1a {
+    width: 90vw;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    margin-left: 2vw;
+    margin-top: 7px;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 10px;
+    border-color: coral;
+}
+
+.ul1a {
+    grid-column-start: 1;
+    margin-top: 10px;
+    background-color: none;
+    border-width: 0;
+    background-color: coral;
+    border-width: 7px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+    margin-left: 3vw;
+}
+
+.h2b {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#skisser {
+    margin: 40px auto;
+    display:flex;
+    width: 800px;
+    height: 320px;
+}
+
+#skisser>div{
+    flex: 1;
+    background-color: indianred;
+    border-style: solid;
+    border-width: 4px;
+    border-color: indianred;
+    opacity: 0.6;
+    background-position: center center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+#skisser>div:hover {
+    flex: 4;
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 1;
+}
+
+#skisse1 {
+    background-image: url(Bilder/Wireframeindex.tif);
+}
+
+#skisse2{
+    background-image: url(Bilder/Wireframechatside.tif);
+}
+
+#skisse3{
+    background-image: url(Bilder/wireframerapporter.tif);
+}
+
+#skisse4{
+    background-image: url(Bilder/wireframerapporter.tif);
+}
+
+#skisse5{
+    background-image: url(Bilder/Databaseproblem.png);
 }

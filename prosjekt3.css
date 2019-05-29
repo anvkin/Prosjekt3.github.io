@@ -7,16 +7,29 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: ;
+    border-style: dotted;
+    border-width: 0px;
+    border-top-width: 7px;
+    border-color: black;
+    margin-bottom: 100px;
 }
 
 footer {
-    display: grid
-    grid-template-columns: 1fr 2fr 2fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: slategray;
+    border-style: solid;
+    border-width: 20px;
+    border-right-color: gray;
+    border-left-color: gray;
+    border-bottom-color: whitesmoke;
+    border-top-color: whitesmoke;
 }
 
 html {
-    background-color: gray;
+    background:url(Bilder/anve.png);
     display: grid;
     max-width: 100vw;
     font-family: sans-serif;
@@ -25,7 +38,8 @@ html {
 .grid-element1 {
     grid-column-start: 2;
     grid-column-end: 3;
-    margin-left: 10vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1>img {
@@ -35,29 +49,123 @@ h1>img {
     margin-top: 20px
 }
 
-div {
+div, .navbar {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
 }
 
-div>a{
-    margin-left: 10vw;
+a{
     margin-top: 4px;
     margin-bottom: 4px;
-}
-
-a {
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
     font-size: 25px;
     color: black;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    padding: 2px;
+    border-radius: 10px;
 }
 
-div>a:hover {
+section>a:hover {
     color: whitesmoke;
     background-color: black;
     transform: scale(1.2);
     transition: 0.5s;
+}
+
+.section {
+    background-color: coral;
+    margin-top: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input {
+    margin-top: 10px;
+}
+
+#tur {
+    width: 110px;
+    height: 215px;
+    background:url(Bilder/spritesheet.png); 
+    animation: run 1s steps(5) infinite;
+    display: grid;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: coral;
+    border-radius: 50%;
+    border-style: solid;
+    margin-bottom: 50px;
+}
+
+@keyframes run {
+    100% {background-position: 640px}
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.h1 {
+    margin-bottom: 0px;
+    grid-column-start: 2;
+    background-color: indianred;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 5px;
+    border-style: solid;
+    margin-top: 100px;
+}
+
+h2 {
+    margin-top: 100px;
+    padding: 10px;
+    background-color: indianred;
+    border-radius: 10px;
+    margin-left: 1vw;
+    font-family: sans-serif;
+    font-size: 20px;   
+}
+
+p {
+    padding: 10px;
+    font-size: 20px; 
+}
+
+.p {
+    grid-column-start: 2;
+    margin-top: 3px;
+}
+
+.a {
+    font-size: 20px;
+}
+
+.p1 {
+    margin-top: 7px;
+    grid-column-start: 2;
+}
+
+p>a:hover {
+    text-decoration: underline;
+    text-decoration-color: black;
+    
+}
+
+input {
+    margin-bottom: 5px;
 }

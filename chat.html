@@ -4,29 +4,35 @@
         <meta charset="UTF-8">
         <title>AnveChat</title>
         <link rel="stylesheet" type="text/css" href="prosjekt3.css">
+        <link rel="icon" href="Bilder/chatsymbol3.png">
     </head>
     <body>
         <header>
-            <h1 class="grid-element1"><img src="Bilder/Chatsymbol.ico"></h1>
+            <h1 class="grid-element1"><img src="Bilder/chatsymbol3.png"></h1>
         </header>
-        <main>
-            <div><a href="index.html">Heim</a></div>
-            <div><a>jddd</a></div>
-            <div><a>jdjwd</a></div>
-            <div><a>dwdd</a></div>
-        <section style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <form id="skjema">
-            <input type="text" id="inpAvsendar" required
-            placeholder="Kven er du?">
+        
+        <section class="navbar" style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+            <a href="index.html">Heim</a>
+            <a href="rapporter.html">Rapporter</a>
+            <a href="plan.html">Plan</a>
+            <a href="skisser.html">Skisser</a>
+        </section>
+        <div id="tur"></div>
+            <main>
+                <h1 class="h1">Chat</h1>
+<section class="section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 310px;">
+    <article id="txtMeldinger" style="color: whitesmoke; width: 300px; padding: 5px; height: 250px; overflow: scroll; border: 3px solid black; "></article> 
+        <form id="skjema">
+            <input class="input" type="text" id="inpAvsendar" required
+            placeholder="Namn">
             <input type="text" id="inpMeaning" required
             placeholder="Kva seier du?">
             <button type="submit"
             class="button">OK</button>
         </form>
-        <article id="txtMeldinger" style="color: whitesmoke; width: 300px; padding: 5px;"></article>    
-        </section>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-<!-- The core Firebase JS SDK is always required and must be listed first -->
+           
+</section>
+
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -99,8 +105,7 @@ meldinger.on("child_added", visMelding);
 skjema.onsubmit = regNyMelding;
 
 </script>
-
-
         </main>
+        <footer></footer>
     </body>
 </html>
